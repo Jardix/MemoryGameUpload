@@ -1,0 +1,107 @@
+<!-- I typed this code myself, without using the Springboard Starting code. What I did use was the work of Marina Ferreira in the form of her Youtube video "Memory Card Game - JavaScript Tutorial". It details the creation of a memory game from scratch, using Javascript. Her channel, or at least the channel that hosted her video, is "freeCodeCamp.org". Parts of her code, like the Javascript Logic, I copied verbatim. The CSS styling, HTML markup, and images were my own creation. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jared's Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="head">
+      <h1>Memory Game!</h1>
+      <section class="button">
+        <button id="reset">Reset</button>
+      </section>
+    </section>
+    <section class="gameBoard">
+      <div class="card" data-identifier="red">
+        <img class="faceUp" src="images/red.PNG" alt="red" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="red">
+        <img class="faceUp" src="images/red.PNG" alt="red" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="blue">
+        <img class="faceUp" src="images/blue.PNG" alt="blue" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="blue">
+        <img class="faceUp" src="images/blue.PNG" alt="blue" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="black">
+        <img class="faceUp" src="images/black.PNG" alt="black" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="black">
+        <img class="faceUp" src="images/black.PNG" alt="black" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="yellow">
+        <img class="faceUp" src="images/yellow.PNG" alt="yellow" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="yellow">
+        <img class="faceUp" src="images/yellow.PNG" alt="yellow" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="pink">
+        <img class="faceUp" src="images/pink.PNG" alt="pink" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="pink">
+        <img class="faceUp" src="images/pink.PNG" alt="pink" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="green">
+        <img class="faceUp" src="images/green.PNG" alt="green" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="green">
+        <img class="faceUp" src="images/green.PNG" alt="green" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="gold">
+        <img class="faceUp" src="images/gold.PNG" alt="gold" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="gold">
+        <img class="faceUp" src="images/gold.PNG" alt="gold" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="sky">
+        <img class="faceUp" src="images/sky.PNG" alt="sky" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+      <div class="card" data-identifier="sky">
+        <img class="faceUp" src="images/sky.PNG" alt="sky" />
+        <img class="faceDown" src="images/Capture.PNG" alt="SB Icon" />
+      </div>
+
+      <!-- // Divs are dynamically created here -->
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- // Game Plan:
+// 1. Set game board background with CSS styling
+// 2. Dynamically create cards using the user's input (5 pairs, 10 pairs, and so on)
+// 3. Clicking a card should change its appearance-it should have a different class or style applied
+// 4. Add a button that will start the game: shuffle the cards and use the input to create the board
+// 5. Add a button that will reset/restart the game once it has ended
+// 6. For every guess made, increment a score variable and display the score while the game is played
+// 7. Store the lowest scoring game in local storage, so that players can see a record of high scores.
+// 8. Use images instead of colors...
+// 9. On click, the card should 'flip'
+// 10. If two successive flips are a match, the cards should stay flipped 'up'
+// 11. Once a card has been clicked, set a Timeout function to allow the user to see the cards
+// 12. User should only be able to click two cards at a time
+// 13. Make sure that the two cards clicked are unique, clicking the same card twice shouldn't count as a match
+// 14. Make sure you cannot click too quickly and guess more than two cards at a time. -->

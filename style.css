@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: rgb(231, 231, 231);
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  color: rgb(0, 0, 0);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    padding: 10px;   
+}
+
+#reset {
+  background: red;
+  color: black;
+  font-size: 25px;
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+}
+
+.gameBoard {
+  margin: auto;
+  height: 640px;
+  width: 640px;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgb(231, 231, 231);
+  perspective: 500px;
+}
+
+.card {
+  width: calc(25% - 10px);
+  height: calc(25% - 10px);
+  position: relative;
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .3s;
+}
+
+.faceUp, .faceDown {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  background: white;
+  backface-visibility: hidden;
+}
+
+.faceUp {
+    transform: rotateY(180deg);
+}
+
+.card:hover{
+cursor: pointer;
+}
+
+.card:active{
+    transform: scale(.95);
+    transition: transform .5s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+    
+}
